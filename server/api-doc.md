@@ -42,19 +42,19 @@ Response:
   "email": "string",
   "username": "string"
 }
+```
 
 Errors:
 ```json
-
 {
-"message": "Invalid email/password",
-"code": 400,
-"from": "Controller User: register user"
+  "message": "Invalid email/password",
+  "code": 400,
+  "from": "Controller User: register user"
 },
 {
-"message": "Internal server error",
-"code": 500,
-"from": "Controller User: register user"
+  "message": "Internal server error",
+  "code": 500,
+  "from": "Controller User: register user"
 }
 ```
 
@@ -79,30 +79,29 @@ Response:
 
 ```json
 {
-    "id": "integer",
-    "email": "string",
-    "access_token": "jwt string"
+  "id": "integer",
+  "email": "string",
+  "access_token": "jwt string"
 }
+```
 
 Errors:
 ```json
-
 {
-"message": "Invalid email/password",
-"code": 401,
-"from": "Controller User: login user"
+  "message": "Invalid email/password",
+  "code": 401,
+  "from": "Controller User: login user"
 },
 {
-"message": "Invalid email/password",
-"code": 400,
-"from": "Controller User: login user"
+  "message": "Invalid email/password",
+  "code": 400,
+  "from": "Controller User: login user"
 },
 {
-"message": "Internal server error",
-"code": 500,
-"from": "Controller User: login user"
+  "message": "Internal server error",
+  "code": 500,
+  "from": "Controller User: login user"
 }
-
 ```
 
 ### POST /loginGoogle
@@ -119,6 +118,7 @@ Request:
 {
   "email": "string"
 }
+```
 
 Response:
 
@@ -128,16 +128,14 @@ Response:
 
 ```json
 {
-    "id": "integer",
-    "email": "string",
-    "access_token": "jwt string"
+  "id": "integer",
+  "email": "string",
+  "access_token": "jwt string"
 }
+```
 
 Errors:
-```json
 not needed format
-
-```
 
 ### GET /tasks
 
@@ -160,16 +158,15 @@ Response:
   "description": "having energy",
   "due_date": "2020-05-04T17:00:00.000Z"
 }
+```
 
 Errors:
 ```json
-
 {
-"message": "Internal server error",
-"code": 500,
-"from": "Controller Task: show all task"
+  "message": "Internal server error",
+  "code": 500,
+  "from": "Controller Task: show all task"
 }
-
 ```
 
 ### POST /tasks
@@ -186,11 +183,12 @@ Request:
 - body:
 ```json
 {
-"title": "string",
-"category": "string",
-"description": "string",
-"due_date": "date/time stampz"
+  "title": "string",
+  "category": "string",
+  "description": "string",
+  "due_date": "date/time stampz"
 }
+```
 
 Response:
 
@@ -204,14 +202,14 @@ Response:
   "description": "having energy",
   "due_date": "2020-05-04T17:00:00.000Z"
 }
+```
 
 Errors:
 ```json
-
 {
-"message": "Internal server error",
-"code": 500,
-"from": "Controller Task: create task"
+  "message": "Internal server error",
+  "code": 500,
+  "from": "Controller Task: create task"
 }
 
 ```
@@ -242,16 +240,15 @@ Response:
   "description": "having energy",
   "due_date": "2020-05-04T17:00:00.000Z"
 }
+```
 
 Errors:
 ```json
-
 {
-"message": "Internal server error",
-"code": 500,
-"from": "Controller Task: show one task"
+  "message": "Internal server error",
+  "code": 500,
+  "from": "Controller Task: show one task"
 }
-
 ```
 
 ### PUT /tasks/:id
@@ -270,11 +267,12 @@ Request:
 - body:
 ```json
 {
-"title": "string",
-"category": "string",
-"description": "string",
-"due_date": "date/time stampz"
+  "title": "string",
+  "category": "string",
+  "description": "string",
+  "due_date": "date/time stampz"
 }
+```
 
 Response:
 
@@ -288,21 +286,20 @@ Response:
   "description": "having energy",
   "due_date": "2020-05-04T17:00:00.000Z"
 }
+```
 
 Errors:
 ```json
-
 {
-"message": "Item not found",
-"code": 404,
-"from": "Controller Task: update task"
+  "message": "Item not found",
+  "code": 404,
+  "from": "Controller Task: update task"
 },
 {
-"message": "Internal server error",
-"code": 500,
-"from": "Controller Task: update task"
+  "message": "Internal server error",
+  "code": 500,
+  "from": "Controller Task: update task"
 }
-
 ```
 
 ### PATCH /tasks/:id
@@ -321,6 +318,7 @@ Request:
 {
   "category": "string"
 }
+```
 
 Response:
 
@@ -334,21 +332,20 @@ Response:
   "description": "having energy",
   "due_date": "2020-05-04T17:00:00.000Z"
 }
+```
 
 Errors:
 ```json
-
 {
-"message": "Item not found",
-"code": 404,
-"from": "Controller Task: change category task"
+  "message": "Item not found",
+  "code": 404,
+  "from": "Controller Task: change category task"
 },
 {
-"message": "Internal server error",
-"code": 500,
-"from": "Controller Task: change category task"
+  "message": "Internal server error",
+  "code": 500,
+  "from": "Controller Task: change category task"
 }
-
 ```
 
 ### DELETE /tasks/:id
@@ -374,19 +371,18 @@ Response:
 { 
   "message": "Task successfully deleted"
 }
+```
 
 Errors:
 ```json
-
 {
-"message": "Item not found",
-"code": 404,
-"from": "Controller Task: delete task"
+  "message": "Item not found",
+  "code": 404,
+  "from": "Controller Task: delete task"
 },
 {
-"message": "Internal server error",
-"code": 500,
-"from": "Controller Task: delete task"
+  "message": "Internal server error",
+  "code": 500,
+  "from": "Controller Task: delete task"
 }
-
 ```
